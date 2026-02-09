@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Node / Web
+**/node_modules/
+**/dist/
+**/build/
+**/.cache/
+**/.parcel-cache/
+**/.vite/
+**/coverage/
+**/output/
+**/*.log
+
+# Python
+**/__pycache__/
+**/.venv/
+
+# Misc
+*.tmp

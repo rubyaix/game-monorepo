@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxel Velocity</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud" class="hud hidden">
+      <div class="panel top-left">
+        <div id="position-text">POS 1/8</div>
+        <div id="lap-text">LAP 1/3</div>
+        <div id="timer-text">00:00.000</div>
+        <div id="split-text">LAST --:--.--- / BEST --:--.---</div>
+      </div>
+      <div class="panel top-right">
+        <div id="item-text">ITEM: NONE</div>
+        <div id="speed-text">SPD 0</div>
+        <canvas id="minimap" width="180" height="180"></canvas>
+      </div>
+      <div id="banner" class="banner hidden">FINAL LAP!</div>
+    </div>
+
+    <div id="pre-race" class="overlay">
+      <div class="card">
+        <h1>Voxel Velocity</h1>
+        <p>Single Race (3 Laps) · 1 Human vs 7 CPU</p>
+        <label>Track
+          <select id="track-select"></select>
+        </label>
+        <label>Character
+          <select id="character-select"></select>
+        </label>
+        <label>Difficulty
+          <select id="difficulty-select">
+            <option>Chill</option>
+            <option selected>Standard</option>
+            <option>Mean</option>
+          </select>
+        </label>
+        <label class="check"><input id="mirror-toggle" type="checkbox" /> Mirror Mode</label>
+        <label class="check"><input id="clones-toggle" type="checkbox" /> Allow Clones</label>
+        <div class="row">
+          <button id="open-options" type="button">Options</button>
+          <button id="start-race" type="button">Start Race</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="options-menu" class="overlay hidden">
+      <div class="card">
+        <h2>Options</h2>
+        <label>Master Volume <input id="master-volume" type="range" min="0" max="100" value="70" /></label>
+        <label>Music Volume <input id="music-volume" type="range" min="0" max="100" value="55" /></label>
+        <label>SFX Volume <input id="sfx-volume" type="range" min="0" max="100" value="70" /></label>
+        <button id="close-options" type="button">Back</button>
+      </div>
+    </div>
+
+    <div id="pause-menu" class="overlay hidden">
+      <div class="card">
+        <h2>Paused</h2>
+        <div class="column">
+          <button id="resume-btn" type="button">Resume</button>
+          <button id="restart-btn" type="button">Restart</button>
+          <button id="quit-btn" type="button">Quit</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="results-menu" class="overlay hidden">
+      <div class="card">
+        <h2>Race Result</h2>
+        <div id="results-text"></div>
+        <div class="row">
+          <button id="results-restart" type="button">Restart</button>
+          <button id="results-quit" type="button">Quit</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

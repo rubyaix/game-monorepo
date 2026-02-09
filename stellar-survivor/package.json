@@ -1,0 +1,16 @@
+{
+  "name": "stellar-survivor",
+  "version": "1.0.0",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "phaser": "^3.90.0",
+    "playwright": "^1.58.1"
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Drift</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud" class="hidden">
+      <div id="lap-counter">Lap 1 / 3</div>
+      <div id="lap-time">Lap: 00:00.000</div>
+      <div id="total-time">Total: 00:00.000</div>
+      <div id="speed">Speed: 0.0</div>
+      <label id="ghost-toggle-wrap">
+        <input id="ghost-toggle" type="checkbox" checked />
+        Ghost
+      </label>
+      <button id="restart-btn" type="button">Restart</button>
+    </div>
+
+    <div id="start-screen" class="overlay">
+      <h1>Micro Drift</h1>
+      <p>Mode: Time Attack (3 Laps)</p>
+      <p>Controls: Arrow/WASD steer, Shift drift</p>
+      <button id="start-btn" type="button">Start</button>
+    </div>
+
+    <div id="finish-screen" class="overlay hidden">
+      <h2>Finish</h2>
+      <p id="finish-total">Total Time: --:--.---</p>
+      <p id="finish-best">Best Lap: --:--.---</p>
+      <button id="finish-restart-btn" type="button">Restart</button>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+:root {
+  color-scheme: dark;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #89d5f0;
+  color: #f4f3ea;
+}
+
+#game-canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+.hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.panel {
+  position: fixed;
+  background: rgb(10 18 24 / 72%);
+  border: 1px solid rgb(174 203 220 / 42%);
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-width: 240px;
+  display: grid;
+  gap: 4px;
+}
+
+.top-left {
+  top: 12px;
+  left: 12px;
+}
+
+.top-right {
+  top: 12px;
+  right: 12px;
+  justify-items: end;
+}
+
+#minimap {
+  margin-top: 6px;
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  border: 1px solid rgb(180 180 180 / 45%);
+  background: rgb(4 9 16 / 70%);
+}
+
+.banner {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #ffe067;
+  text-shadow: 0 4px 0 rgb(0 0 0 / 40%);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(7 12 18 / 78%);
+  z-index: 20;
+  padding: 16px;
+}
+
+.card {
+  width: min(460px, 94vw);
+  background: #13233c;
+  border: 1px solid #4f7399;
+  border-radius: 14px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.card h1,
+.card h2,
+.card p {
+  margin: 0;
+}
+
+label {
+  display: grid;
+  gap: 4px;
+  font-weight: 700;
+}
+
+select,
+input[type="range"] {
+  width: 100%;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.row,
+.column {
+  display: flex;
+  gap: 8px;
+}
+
+.column {
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  background: #ffc857;
+  color: #1b2533;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.hidden {
+  display: none !important;
+}

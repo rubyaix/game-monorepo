@@ -1,0 +1,6 @@
+{
+  "steps": [
+    { "buttons": ["space"], "frames": 120 },
+    { "buttons": [], "frames": 1 }
+  ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake.io+ Clone</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <canvas id="game-canvas" aria-label="Snake.io+ game canvas"></canvas>
+
+    <div id="menu-overlay" class="overlay visible">
+      <div class="panel">
+        <p class="badge">ARCADE ARENA</p>
+        <h1>Snake.io+</h1>
+        <p class="summary">먹이를 모아 길이를 키우고, 다른 뱀의 몸통에 부딪히게 유도하세요.</p>
+        <ul class="controls">
+          <li><span>이동</span><strong>WASD / 방향키 / 마우스</strong></li>
+          <li><span>부스트</span><strong>Space / Shift / 두 손가락 터치</strong></li>
+          <li><span>일시정지</span><strong>P</strong></li>
+          <li><span>전체화면</span><strong>F</strong></li>
+        </ul>
+        <div class="actions">
+          <button id="start-btn" class="primary">게임 시작</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameover-overlay" class="overlay">
+      <div class="panel gameover-panel">
+        <p class="badge">RUN ENDED</p>
+        <h2>Game Over</h2>
+        <p id="gameover-stats">점수 0</p>
+        <div class="actions">
+          <button id="restart-btn" class="primary">다시 시작</button>
+          <button id="back-menu-btn" class="secondary">메뉴로</button>
+        </div>
+      </div>
+    </div>
+
+    <button id="touch-boost" class="touch-boost" aria-label="Boost">BOOST</button>
+  </div>
+
+  <script src="./game.js"></script>
+</body>
+</html>

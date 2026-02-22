@@ -22,3 +22,5 @@ Original prompt: Implement "Micro Drift" as a 3D voxel kart racer using Three.js
 - Repositioned start/finish line to a top straight section (`START_S = 20`) for cleaner race starts.
 - Validated local launch via `npm run start` and HTTP 200 on `/index.html`.
 - Verified via Playwright loop that HUD updates, off-road speed drop (80 -> 40), wall stun state (`stunTimeLeft`), and drift boost speed spike (e.g. speed 96 after long hold/release) are reflected in state output.
+- 2026-02-22: Created `/docs` documentation set with YAML front matter for all markdown files (`PRD`, `GameDesign`, `Architecture`, `TechnicalSpec`, `QA-TestPlan`, `Roadmap`, `Changelog`, `DocumentationPolicy`, `README`).
+- Added documentation maintenance rule: after code changes, related docs and changelog must be updated in the same task.

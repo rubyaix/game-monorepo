@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Micro Drift</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <!-- Screen Space VFX -->
+  <div id="vfx-flash"></div>
+  <div id="vfx-speedlines"></div>
+  <div id="vfx-boost-text">BOOST!</div>
+
+  <canvas id="game-canvas"></canvas>
+
+  <!-- In-Game HUD -->
+  <div id="game-dashboard" class="game-ui hidden">
+    <div id="hud-top-left">
+      <div id="lap-counter">LAP 1 / 3</div>
+      <div id="lap-time">00:00.000</div>
+      <div id="position-display">1st / 6</div>
+    </div>
+    <div id="hud-top-right">
+      <button id="restart-btn" type="button" class="btn-small">RESTART</button>
+    </div>
+    <div id="hud-bottom-right">
+      <div class="boost-ui">
+        <div class="boost-bar-bg">
+          <div id="gauge-fill" class="boost-bar-fill"></div>
+        </div>
+        <div id="boosters-count" class="boost-count">x 0</div>
+      </div>
+      <div class="dial-container">
+        <div id="speed-dial" class="speed-dial"></div>
+        <div class="speed-center">
+          <div id="speed" class="speed-value">0</div>
+          <div class="speed-unit">km/h</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Title Screen -->
+  <div id="start-screen" class="overlay">
+    <h1>Micro Drift</h1>
+    <p class="subtitle">Voxel Kart Racing</p>
+    <p class="controls-hint">Arrow/WASD steer · Shift drift · ↑ boost</p>
+    <button id="start-btn" type="button">PLAY</button>
+  </div>
+
+  <!-- Kart Selection -->
+  <div id="kart-select-screen" class="overlay hidden">
+    <h2 class="select-title">SELECT KART</h2>
+    <div id="kart-grid" class="select-grid"></div>
+    <button id="kart-confirm-btn" type="button">NEXT →</button>
+  </div>
+
+  <!-- Track Selection -->
+  <div id="track-select-screen" class="overlay hidden">
+    <h2 class="select-title">SELECT TRACK</h2>
+    <div id="track-grid" class="select-grid"></div>
+    <button id="track-confirm-btn" type="button">RACE!</button>
+  </div>
+
+  <!-- Finish / Results -->
+  <div id="finish-screen" class="overlay hidden">
+    <h2 class="finish-title">RACE RESULTS</h2>
+    <div class="finish-panel">
+      <div id="finish-position" class="finish-pos">1st</div>
+      <p id="finish-total">Total: --:--.---</p>
+      <p id="finish-best">Best Lap: --:--.---</p>
+    </div>
+    <div id="finish-standings" class="standings-list"></div>
+    <button id="finish-restart-btn" type="button" class="btn-primary">PLAY AGAIN</button>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

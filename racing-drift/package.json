@@ -1,0 +1,15 @@
+{
+  "name": "micro-drift",
+  "version": "1.0.0",
+  "description": "Micro Drift - voxel time attack kart racer built with Three.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "python3 -m http.server 4173"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.182.0"
+  }
+}
